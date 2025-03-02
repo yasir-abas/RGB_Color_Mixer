@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Color Generator</title>
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: steelblue;
+}
+
+.color-box {
+    background-color: #fff;
+    width: 400px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.note {
+    margin: 10px 0;
+    color: orange;
+}
+
+.lables {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.lables h2:nth-child(1) {
+    color: red;
+}
+
+.lables h2:nth-child(2) {
+    color: green
+}
+
+.lables h2:nth-child(3) {
+    color: blue;
+}
+
+.cradit {
+    width: 400px;
+    text-align: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.2);
+    padding: 4px;
+    margin: 20px;
+}
+
+@media (max-width: 450px) {
+    .color-box {
+        width: 300px;
+    }
+
+    .note {
+        width: 300px;
+        font-size: 15px;
+    }
+
+    .lables {
+        width: 300px;
+    }
+
+    input[type="range"] {
+        width: 100px;
+    }
+
+    .cradit {
+        width: 300px;
+    }
+}
+    </style>
+</head>
+<body>
+    <h1>Get Your Desired Color</h1>
+    <div class="rgb-code">rgb(255, 255, 255)</div>
+    <div class="color-box"></div>
+    <div class="note">Drag the bars below to spacify color amount</div>
+    <div class="ranges">
+        <input type="range" min="0" max="255" value="0" class="amount" id="red">
+        <input type="range" min="0" max="255" value="0" class="amount" id="green">
+        <input type="range" min="0" max="255" value="0" class="amount" id="blue">
+    </div>
+    <div class="lables">
+        <h2>Red</h2>
+        <h2>Green</h2>
+        <h2>Blue</h2>
+    </div>
+    <div class="cradit">Yasir - All rights reserved &copy;2025</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
